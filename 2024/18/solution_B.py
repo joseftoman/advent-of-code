@@ -43,7 +43,7 @@ def main():
 
     navigable = 0
     blocked = len(falling_bytes)
-    next_guess = int(blocked * INITIAL_FILL_RATIO)
+    next_guess = int((MAX_X + 1) * (MAX_Y + 1) * INITIAL_FILL_RATIO)
     
     while blocked - navigable > 1:
         can_walk = run(set(falling_bytes[:next_guess]))
